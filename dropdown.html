@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dropdown list</title>
+    <style>
+        body,ul,li,a{margin: 0;padding: 0;}
+
+        body{
+            font-family: 'Helvetica Neue',Helvetica,Serif;
+            font-size: 15px;
+            margin-top: 20px;
+        }
+        a{text-decoration: none;}
+        li{list-style: none;}
+
+        .menu-list .menu-item{
+            float:left;
+            padding-right: 20px;
+            padding-left: 20px;
+            font-size: 24px;
+            position: relative;
+            text-align: center;
+
+        }
+
+        .menu-item:hover{
+            background-color: #ddd;
+        }
+
+        .menu-list li a{
+            line-height: 24px;
+        }
+
+        .sub-menu{
+            display: none;
+            position: absolute;
+            left:0;
+            top:100%;
+            width:100%;
+            border:1px solid #ccc;
+        }
+
+        .sub-menu li{
+            border-bottom:1px dotted #ddd ;
+            height: 40px;
+            padding-left: 5px;
+        }
+
+        .sub-menu li:nth-last-of-type(1){
+            border-bottom: none;
+        }
+
+        .sub-menu li:hover{
+            background-color: #ccc;
+        }
+
+        .sub-menu li a{
+            font-size: 18px;
+            line-height: 18px;
+            width:100%;
+
+
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="nav">
+    <div class="nav-inner">
+        <ul class="menu-list">
+            <li class="menu-item"><a>首页</a></li>
+            <li class="menu-item" id="menu-item2"><a>Web开发</a>
+                <ul class="sub-menu">
+                    <li/><a>HTML5</a></li>
+                    <li/><a>CSS3</a></li>
+                    <li/><a>JavaScript</a></li>
+                </ul></li>
+            <li class="menu-item" id="menu-item3"><a>移动开发</a>
+                <ul class="sub-menu" style="display: none;">
+                    <li/><a>Android 开发</a></li>
+                    <li/><a>iOS 开发</a></li>
+                    <li/><a>移动 Web 开发</a></li>
+                </ul></li>
+            </li>
+            <li class="menu-item"><a>资源工具</a></li>
+            <li class="menu-item"><a>Github</a></li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    (function () {
+        var menuItem2 = document.getElementById("menu-item2");
+        var menuItem3 = document.getElementById("menu-item3");
+        var subMenu2 = menuItem2.getElementsByTagName("ul")[0];
+        var subMenu3 = menuItem3.getElementsByTagName("ul")[0];
+
+        menuItem2.onmouseover = function () {
+            subMenu2.style.display = "block";
+        }
+
+        menuItem2.onmouseout = function () {
+            subMenu2.style.display = "none";
+        }
+
+        menuItem3.onmouseover = function () {
+            subMenu3.style.display = "block";
+        }
+
+        menuItem3.onmouseout = function () {
+            subMenu3.style.display = "none";
+        }
+
+    })();
+</script>
+
+</body>
+</html>
