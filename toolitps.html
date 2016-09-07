@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Tooltips</title>
+    <style>
+        div{
+            margin: 0;
+            padding: 0;
+        }
+        .button{
+
+            width: 150px;
+            margin-top: 50px;
+            margin-right: 20px;
+            margin-left: 150px;
+            height: 30px;
+            line-height:30px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .tooltip-left-btn{
+            position: relative;
+        }
+
+        .tip{
+            display: none;
+            width: 100px;
+            height: 20px;
+            font-size: 10px;
+            line-height:20px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+
+        .tip-left{
+            position: absolute;
+            top:5px;
+            left: 160px;
+        }
+
+        .arrow-left-inner{
+            position:relative ;
+            display: block;
+            border-radius: 3px;
+        }
+
+        .arrow-left{
+            position: absolute;
+            left:-10px;
+            top:5px;
+            height: 0;
+            width: 0;
+            font-size: 0;
+            line-height: 0;
+            border-color:  transparent #000 transparent  transparent ;
+            border-style: solid;
+            border-width: 5px;
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <div class="button tooltip-left-btn">Tooltip on left
+
+    <div class="tip-left">
+        <div class="tip arrow-left-inner">Tooltip on left123
+        <span class="arrow-left"></span>
+        </div>
+    </div>
+
+    </div>
+
+    <!--<div class="button tooltip-right-btn">Tooltip on left-->
+        <!--<div class="tip tip-right">Tooltip on left-->
+        <!--<span class="arrow-right"></span></div></div>-->
+
+    <!--<div class="button tooltip-top-btn">Tooltip on left-->
+        <!--<div class="tip tip-top">Tooltip on left</div></div>-->
+
+    <!--<div class="button tooltip-bottom-btn">Tooltip on left-->
+        <!--<div class="tip tip-bottom">Tooltip on left</div></div>-->
+    <!--</div>-->
+</body>
+</html>
